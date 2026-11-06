@@ -118,8 +118,10 @@
     <li><strong>Firebase Analytics</strong> records how the game is played —
     for example, which levels are started, won or lost, and which boosters
     and buttons are used, and which shop items are bought (the product and
-      its price, never your payment details) — with an app-instance ID and
-      general device information. It does not use your advertising ID. We
+      its price, never your payment details) — with an app-instance ID,
+      general device information and a coarse location (country or region)
+      that Google derives from your IP address. It does not use your
+      advertising ID. We
       use it to find levels that are too hard or too easy and to see which
       offers players like.</li>
     <li><strong>Firebase Crashlytics</strong> sends a report if the game
@@ -129,8 +131,10 @@
     coin prices and ad timing, so we can tune the game without an
     update.</li>
   </ul>
-  <p>None of this includes your name or contact details. Statistics are kept
-  for Firebase's standard period (up to 14 months).</p>
+  <p>Crashlytics and Remote Config use a Firebase installation ID (a random
+  ID for this copy of the game) to work. None of this includes your name or
+  contact details, and it is not linked to you as a person. Statistics are
+  kept for up to 14 months and then deleted automatically.</p>
 
   <h2>Purchases</h2>
   <p>In-app purchases (coins, boosters, bundles and Remove Ads) are handled
@@ -151,8 +155,9 @@
     advertising ID: Android Settings → Privacy → Ads.</li>
     <li>Ads that give a reward are always optional. Nothing in the game is
     locked behind watching one.</li>
-    <li>To ask us to delete your game statistics, email us at the address
-    below.</li>
+    <li><strong>Settings → Reset progress</strong> also resets the game's
+    statistics ID, so statistics collected before can no longer be linked to
+    your phone.</li>
   </ul>
 
   <h2>Children</h2>
